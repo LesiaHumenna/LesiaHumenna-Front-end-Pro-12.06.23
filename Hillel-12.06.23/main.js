@@ -1,5 +1,4 @@
 const fruits = prompt('What fruits do you like?');
-creat string => [] 
 let arr = fruits.split(',');
 //сортуємо по зростанню
 arr.sort()
