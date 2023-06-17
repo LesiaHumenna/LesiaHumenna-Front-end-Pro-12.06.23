@@ -52,7 +52,7 @@ let productNumb = array.filter(num => num > 0 ).reduce((acc, num) => acc * num);
 //
 let maxItem = Math.max(...array);
 let itemNumb = array.filter(num => num === maxItem);
-console.log(itemNumb);
+    console.log(itemNumb);
 for (let i = 0; i < array.length; i++) {
     if (array[i] < maxItem) {
         array[i] = null;
