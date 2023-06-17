@@ -1,10 +1,8 @@
 const fruits = prompt('What fruits do you like?');
 let arr = fruits.split(',');
-//сортуємо по зростанню
-arr.sort()
-//коли довж.[] >= 4
+console.log(arr);
+arr.sort();
 while(arr.length >= 4){
-//вирізаємо з 1-4 item  
 arr = arr.slice(1,4);
 }
 alert(arr.join(', '));
@@ -68,14 +66,15 @@ console.log('-добуток > 0-');
 //
 let productNumb = array.filter(num => num > 0 ).reduce((acc, num) => acc * num);
     console.log(productNumb);
-  //
-console.log('-найбільший серед item [] => null-');
+//console.log('-найбільший серед item [] => null-');
+let maxItem = Math.max(...array);
+let itemNumb = array.filter(num => num === maxItem);
+console.log(itemNumb);
 
-let itemNumb = array.filter(num => num === Math.max(...array))
-    console.log(itemNumb);
-for (let num of array){
-    let maxItem = Math.max(...array);
-        if(num < maxItem ){
-            console.log(num = null);
-        }
+for (let i = 0; i < array.length; i++) {
+  if (array[i] < maxItem) {
+    array[i] = null;
+  }
 }
+
+console.log(array);
